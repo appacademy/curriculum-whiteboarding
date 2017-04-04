@@ -7,6 +7,7 @@ students are given during the first nine weeks of the curriculum.
 
 ### [Week 2 Day 2][w2]
 
-These questions focus on the students' abilities with Ruby and Git.
+These questions focus on the students' abilities with Ruby, Git, and
+Agile development. 
 
 [w2]: ./schedule/w2.md
