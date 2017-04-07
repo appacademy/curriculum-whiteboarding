@@ -8,6 +8,12 @@ students are given during the first nine weeks of the curriculum.
 ### [Week 2 Day 2][w2]
 
 These questions focus on the students' abilities with Ruby, Git, and
-Agile development. 
+Agile development.
 
 [w2]: ./schedule/w2.md
+
+### [Week 3 Day 2][w3]
+
+These questions review some algorithms, Ruby, SQL, and OOP.
+
+[w3]: ./schedule/w3.md
