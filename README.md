@@ -17,3 +17,10 @@ Agile development.
 These questions review some algorithms, Ruby, SQL, and OOP.
 
 [w3]: ./schedule/w3.md
+
+### [Week 4 Day 4][w4]
+
+These questions focus on Rails associations, routes, and ActiveRecord
+queries. 
+
+[w4]: ./schedule/w4.md
