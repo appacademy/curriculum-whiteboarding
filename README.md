@@ -5,22 +5,20 @@ students are given during the first nine weeks of the curriculum.
 
 ## Schedule
 
-### [Week 2 Day 2][w2]
+There are four whiteboarding sessions that occur during the curriculum.
 
-These questions focus on the students' abilities with Ruby, Git, and
-Agile development.
+* [Week 2][w2] (W2D2)
+* [Week 3][w3] (W3D2)
+* [Week 4][w4] (W4D4)
+* [Week 7][w7] (W7D3)
 
 [w2]: ./schedule/w2.md
-
-### [Week 3 Day 2][w3]
-
-These questions review some algorithms, Ruby, SQL, and OOP.
-
 [w3]: ./schedule/w3.md
-
-### [Week 4 Day 4][w4]
-
-These questions focus on Rails associations, routes, and ActiveRecord
-queries. 
-
 [w4]: ./schedule/w4.md
+[w7]: ./schedule/w7.md
+
+## Instructors
+
+Instructor can view the old Google Drive [here][google-drive].
+
+[google-drive]: https://drive.google.com/drive/u/1/folders/0B2GA4obf3HcmbkUyU2d0RVRGdjA
