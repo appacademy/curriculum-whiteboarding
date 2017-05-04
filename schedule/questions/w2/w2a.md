@@ -2,14 +2,16 @@
 
 ## Student A
 
-Questions you will be asking:
+Below are the two questions that you will be asking student B.
 
 ### Recursive Sum
+
+#### Prompt
 
 Write a function that takes an array of integers and returns their sum.
 Use recursion.
 
-Answer:
+#### Solution
 
 ```ruby
 def sum_rec(nums)
@@ -20,12 +22,14 @@ end
 
 ### Ruby – Contrast and Compare
 
+#### Prompt
+
 Ruby is a dynamic, reflective language that lends itself to
 object-oriented programming. What are some benefits and drawbacks of
 dynamic languages? What are some benefits and drawbacks of reflection
 and object-oriented programming?
 
-Answer:
+#### Solution
 
 This question has a wide variety of potential answers.
 

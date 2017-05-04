@@ -2,15 +2,17 @@
 
 ## Student B
 
-Questions you will be asking:
+Below are the two questions that you will be asking student A.
 
 ### Caesar Cipher
+
+#### Prompt
 
 Write a function that takes a message and an increment amount and
 outputs the same letters shifted by that amount in the alphabet. Assume
 lowercase and no punctuation. Preserve spaces.
 
-Solution:
+#### Solution
 
 The most time-efficient way to approach this problem is to create a
 dictionary of letters using a structure that makes it easy and fast to
@@ -41,12 +43,14 @@ end
 
 ### OOP – Parking Lot
 
+#### Prompt
+
 Design a parking lot using object-oriented principles.
 
 (Don't spend too much time fleshing out actual methods. Aim to give a
 holistic view of which methods exist on each of the classes.)
 
-Solution:
+#### Solution
 
 This question is very open-ended. The interviewee should ask questions
 to specify what the design expectations are.

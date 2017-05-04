@@ -2,21 +2,23 @@
 
 ## Student A
 
-Questions you will be asking:
+Below are the two questions that you will be asking student B.
 
 ### OOP – Jukebox
 
+#### Prompt
+
 Design a musical jukebox using object-oriented principles.
 
-Solution:
+#### Solution
 
 Here are some answers to questions the interviewee might ask:
 
-#### Is the jukebox physical or virtual?
+##### Is the jukebox physical or virtual?
 
 Assume the jukebox is virtual or computer-simulated.
 
-#### Does the jukebox accept currency?
+##### Does the jukebox accept currency?
 
 Assume the jukebox operates free of charge.
 
@@ -76,11 +78,13 @@ end
 
 ### SQL – Employees
 
+#### Prompt
+
 In a SQL db, you have two tables, an employees table and a departments
 table. Employees belong to only one department. Write a SQL query that,
 given a department name, finds all the employees in that department.
 
-Solution:
+#### Solution
 
 ```sql
 SELECT

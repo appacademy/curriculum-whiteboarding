@@ -2,7 +2,13 @@
 
 ## Student B
 
-1. Our company needs an internal web application where employees can be
+Below are the two questions that you will be asking student A.
+
+### Internal Project
+
+#### Prompt
+
+Our company needs an internal web application where employees can be
 associated with multiple projects and projects can be associated with
 multiple employees. How would you design the schema and models for this
 application?
@@ -13,7 +19,7 @@ include?
 (Feel free to use "User" for the employee model and "users" for the
 employees table in the database.)
 
-Solution:
+#### Solution
 
 The key here is that users have a one-to-many relationship with projects
 and projects have a one-to-many relationship with users. This should
@@ -103,10 +109,14 @@ class Project < ActiveRecord::Base
 end
 ```
 
-2. Describe a method for providing user authentication through session
+### Authentication
+
+#### Prompt
+
+Describe a method for providing user authentication through session
 tokens.
 
-Solution:
+#### Solution
 
 A solution to this prompt should touch on the following:
 

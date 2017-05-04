@@ -2,8 +2,13 @@
 
 ## Student A
 
-### What code would you have to write to generate the following routes?
+Below are the two questions that you will be asking student B.
 
+### Routes
+
+#### Prompt
+
+What code would you have to write to generate the following routes?
 Also, which controller actions will each route be matched to by default?
 
 ```
@@ -54,7 +59,11 @@ POST /cats/:cat_id/upvote          upvotes#create
 DELETE /cats/:cat_id/upvote        upvotes#destroy
 ```
 
-### What is wrong with the following controller action, and how would you
+### Bad Code
+
+#### Prompt
+
+What is wrong with the following controller action, and how would you
 improve it?
 
 ``` ruby
@@ -69,7 +78,7 @@ class CommentsController < ApplicationController
 end
 ```
 
-Solution:
+#### Solution
 
 There are a few problems here.
 

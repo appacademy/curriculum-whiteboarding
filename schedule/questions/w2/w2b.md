@@ -2,16 +2,18 @@
 
 ## Student B
 
-Questions you will be asking:
+Below are the two questions that you will be asking student A.
 
 ### Fibonacci – Two Ways
+
+#### Prompt
 
 Write a method, fibs(num) which returns the first n elements from the
 Fibonacci sequence, given n.
 
 Solve it both iteratively and recursively.
 
-Answer:
+#### Solution
 
 Iterative Solution:
 
@@ -46,10 +48,12 @@ end
 
 ### Agile
 
+#### Prompt
+
 Define "Test-Driven Development" and "Continuous Integration". Also,
 what are their benefits?
 
-Possible Answer:
+#### Solution
 
 Test-Driven Development follows the pattern of writing tests first,
 watching them fail, writing the code to make them pass, and then
