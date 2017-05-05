@@ -27,7 +27,7 @@ POST /cats/:cat_id/upvote
 DELETE /cats/:cat_id/upvote
 ```
 
-Solution:
+#### Solution
 
 This is the simplest way:
 
