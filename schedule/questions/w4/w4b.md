@@ -16,7 +16,7 @@ application?
 Include your database and model validations. What validations should you
 include?
 
-(Feel free to use "User" for the employee model and "users" for the
+(Feel free to use `User` for the employee model and `users` for the
 employees table in the database.)
 
 #### Solution

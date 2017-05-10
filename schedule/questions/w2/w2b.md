@@ -8,8 +8,8 @@ Below are the two questions that you will be asking student A.
 
 #### Prompt
 
-Write a method, fibs(num) which returns the first n elements from the
-Fibonacci sequence, given n.
+Write a method, `fibs(num)` which returns the first `num` elements from
+the Fibonacci sequence, given `num`.
 
 Solve it both iteratively and recursively.
 
@@ -50,7 +50,7 @@ end
 
 #### Prompt
 
-Define "Test-Driven Development" and "Continuous Integration". Also,
+Define "Test-Driven Development" and "Continuous Integration." Also,
 what are their benefits?
 
 #### Solution

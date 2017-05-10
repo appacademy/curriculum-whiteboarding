@@ -33,27 +33,27 @@ and object-oriented programming?
 
 This question has a wide variety of potential answers.
 
-Some benefits of dynamic languages:
+Benefits of dynamic languages:
 
 * Allows for execution of code at compile time
 * Potentially more abstraction and less code
 * Dynamic typing allows for flexibility
 
-Some drawbacks of dynamic languages:
+Drawbacks of dynamic languages:
 
 * Dynamic typing means that errors are often encountered at run time
 * Run time evaluation decreases execution speed
 
-Some benefits of reflection:
+Benefits of reflection:
 
 * It allows for much of metaprogramming
 * Create custom methods on the fly
 
-Some drawback of reflection:
+Drawbacks of reflection:
 
 * Code can be very confusing/hard to reason about
 
-Some benefits of object-oriented programming:
+Benefits of object-oriented programming:
 
 * Inheritance lends itself to easy reusability of code
 * Encapsulation offers a system for organization of code
@@ -61,7 +61,7 @@ Some benefits of object-oriented programming:
 perform what they need to do without making that information public to
 external objects
 
-Some drawbacks of object-oriented programming:
+Drawbacks of object-oriented programming:
 
 * The preference for data over functions can result in more code
 * Polymorphism and inheritance can make it difficult to determine what
