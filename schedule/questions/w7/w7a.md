@@ -70,6 +70,8 @@ class DistanceTracker extends React.Component {
 }
 ```
 
+[distance-code-excerpt]: '../../../code-excerpts/distance-tracker.md';
+
 #### Solution
 
 It can be tricky to find errors in code without running it. If the
@@ -125,8 +127,6 @@ This component could be used like this:
   <div>This is a child</div>
 </DistanceTracker>
 ```
-
-[distance-code-excerpt]: '../../code-excerpts/distance-tracker.md';
 
 ### React – Contrast and Compare
 
