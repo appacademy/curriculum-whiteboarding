@@ -70,7 +70,7 @@ class DistanceTracker extends React.Component {
 }
 ```
 
-[distance-code-excerpt]: '../../../../code-excerpts/distance-tracker.md';
+[distance-code-excerpt]: 'https://github.com/appacademy/curriculum-whiteboarding/blob/master/schedule/code-excerpts/distance-tracker.md';
 
 #### Solution
 
