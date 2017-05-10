@@ -30,7 +30,7 @@ class DistanceTracker extends React.Component {
   }
 
   startTracker() {
-    setTimeout(() => {
+    setInterval(() => {
       this.updateDistance();
     }, 1000);
   }
