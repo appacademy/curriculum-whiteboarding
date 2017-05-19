@@ -60,8 +60,8 @@ class DistanceTracker extends React.Component {
         <h3>You are moving north at {this.state.speed} feet per second.</h3>
         <h3>You have travelled north {this.state.distanceTravelled} feet so far.</h3>
         <div>
-          <button onClick={updateSpeed(1)}>Go Faster</button>
-          <button onClick={updateSpeed(-1)}>Go Slower</button>
+          <button onClick={this.updateSpeed(1)}>Go Faster</button>
+          <button onClick={this.updateSpeed(-1)}>Go Slower</button>
         </div>
         {children}
       </div>
@@ -116,7 +116,7 @@ this.setState({...}, () => console.log(...));
 ###### Click Callback
 
 The `onClick` should be a callback, not an invoked function. We should
-have something like this `onClick={() => updateSpeed(1)}`.
+have something like this `onClick={() => this.updateSpeed(1)}`.
 
 ##### Usage
 
