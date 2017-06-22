@@ -27,6 +27,10 @@ POST /cats/:cat_id/upvote
 DELETE /cats/:cat_id/upvote
 ```
 
+The interviewee can reference these routes [here][routes].
+
+[routes]: ../../code-excerpts/routes.md
+
 #### Solution
 
 This is the simplest way:
