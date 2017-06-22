@@ -98,7 +98,7 @@ To fix that problem, we should `includes` the comments to keep them in
 memory.
 
 ``` ruby
-posts = Post.include(:comments).all
+posts = Post.includes(:comments).all
 ```
 
 Additionally, for each comment, we are calling the `author` method,
