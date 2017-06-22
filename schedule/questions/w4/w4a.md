@@ -34,7 +34,7 @@ This is the simplest way:
 ```ruby
 Rails.application.routes.draw do
   resources :cats do
-    resources :tricks, only: [:index, :create, :delete]
+    resources :tricks, only: [:index, :create, :destroy]
     resource :upvote, only: [:create, :destroy]
   end
 end
