@@ -82,6 +82,10 @@ class CommentsController < ApplicationController
 end
 ```
 
+The interviewee can see the code [here][bad-code].
+
+[bad-code]: ../../code-excerpts/bad-code.md
+
 #### Solution
 
 There are a few problems here.
