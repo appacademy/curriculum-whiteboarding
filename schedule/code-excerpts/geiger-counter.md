@@ -23,7 +23,7 @@ class GeigerCounter extends React.Component {
   updateCounts() {
     const booleanVal = this.generateBoolean();
 
-    let newCounts;
+    const newCounts;
 
     if (this.state.counts.length < this.state.maxCountsSize) {
       newCounts = this.state.counts.concat(booleanVal);
