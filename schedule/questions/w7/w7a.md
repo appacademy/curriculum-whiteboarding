@@ -17,6 +17,8 @@ Feel free to let the interviewee view the code
 [here][geiger-code-excerpt].
 
 ```js
+import React from 'react';
+
 class GeigerCounter extends React.Component {
   constructor() {
     this.state = {

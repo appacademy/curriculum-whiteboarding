@@ -1,6 +1,8 @@
 # Geiger Counter
 
 ```js
+import React from 'react';
+
 class GeigerCounter extends React.Component {
   constructor() {
     this.state = {
