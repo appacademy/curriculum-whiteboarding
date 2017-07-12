@@ -26,12 +26,12 @@ The state should look something like this:
 ```js
 {
   todos {
-    1 {
+    1: {
       id: 1,
       title: 'A Post',
       body: 'It\'s body'
     },
-    2 {
+    2: {
       id: 2,
       title: 'Another Post',
       body: 'It also has a body'
