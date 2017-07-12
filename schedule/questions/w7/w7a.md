@@ -9,7 +9,7 @@ Below are the two questions that you will be asking student B.
 #### Prompt
 
 A junior software engineer at our company wrote the following code.
-There are at least four problems with it. What are those problems, and
+There are at least six problems with it. What are those problems, and
 how would you fix them? Also, what does the component do? And can you
 give an example of how it could be used?
 
@@ -39,12 +39,12 @@ class GeigerCounter extends React.Component {
   updateCounts() {
     const booleanVal = this.generateBoolean();
 
-    let newCounts;
+    const newCounts;
 
     if (this.state.counts.length < this.state.maxCountsSize) {
-      newCounts = this.state.counts.concat(booleanVal);
+      newCounts = this.state.counts.concat([booleanVal]);
     } else {
-      newCounts = this.state.counts.slice(1).concat(booleanVal);
+      newCounts = this.state.counts.slice(1).concat([booleanVal]);
     }
 
     this.setState({ counts: newCounts });
@@ -61,13 +61,13 @@ class GeigerCounter extends React.Component {
   geigerValue() {
     const { length } = this.state.counts;
 
-    let trueCount = 0;
+    const trueCounts = 0;
 
     for (let i = 0; i < length; i++) {
-      if (this.state.counts[i]) trueCount++;
+      if (this.state.counts[i]) trueCounts++;
     }
 
-    return trueCount / length;
+    return trueCounts / length;
   }
 
   updateProbability(value) {
@@ -111,6 +111,12 @@ nudge them in the right direction.
 
 In the constructor, there should be a call of `super(props);` at the
 beginning. There should also be `props` passes in to the constructor.
+
+###### Inappropriate `const`
+
+In the `updateCounts` function, we are using `const newCounts;`, but
+it's conditionally assigned a value in the lines that follow that
+declaration. Use `let` instead!
 
 ###### Infinite Interval
 
