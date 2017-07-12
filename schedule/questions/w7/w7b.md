@@ -48,12 +48,12 @@ The action creators should look something like this:
 
 ```js
 export const ReceivePosts = posts => ({
-  type RECEIVE_POSTS,
+  type: RECEIVE_POSTS,
   posts
 });
 
 export const ReceivePost = post => ({
-  type RECEIVE_POST,
+  type: RECEIVE_POST,
   post
 });
 
@@ -61,7 +61,7 @@ export const ReceivePost = post => ({
 // The id is enough to identify the post to be deleted, and we always
 // want our actions to cary the smallest possible payload
 export const DeletePost = id => ({
-  type DELETE_POST,
+  type: DELETE_POST,
   id
 });
 ```
