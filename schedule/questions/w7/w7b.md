@@ -39,6 +39,7 @@ The state should look something like this:
   }
 }
 ```
+
 In particular, the posts should be stored in an object nested under its
 Id. They should not be stored in an array (because we will want constant
 time lookup).
