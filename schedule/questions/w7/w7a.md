@@ -14,63 +14,90 @@ how would you fix them? Also, what does the component do? And can you
 give an example of how it could be used?
 
 Feel free to let the interviewee view the code
-[here][distance-code-excerpt].
+[here][geiger-code-excerpt].
 
 ```js
-class DistanceTracker extends React.Component {
-  constructor(props) {
+class GeigerCounter extends React.Component {
+  constructor() {
     this.state = {
-      distanceTravelled: 0,
-      speed: 1,
+      counts: [false],
+      probability: 50,
+      maxCountsSize: this.props.maxCountsSize || 30,
     };
   }
 
   componentDidMount() {
-    this.startTracker();
+    this.startCounter();
   }
 
-  startTracker() {
+  startCounter() {
     setInterval(() => {
-      this.updateDistance();
+      this.updateCounts();
     }, 1000);
   }
 
-  updateDistance() {
-    const { distanceTravelled, speed } = this.state;
-    const updatedDistance = distanceTravelled + speed;
-    console.log(`Before update, distance was: ${this.state.distanceTravelled}`);
-    this.setState({
-      distanceTravelled: updatedDistance,
-    });
-    console.log(`After update, distance is: ${this.state.distanceTravelled}`);
+  updateCounts() {
+    const booleanVal = this.generateBoolean();
+
+    let newCounts;
+
+    if (this.state.counts.length < this.state.maxCountsSize) {
+      newCounts = this.state.counts.concat(booleanVal);
+    } else {
+      newCounts = this.state.counts.slice(1).concat(booleanVal);
+    }
+
+    this.setState({ counts: newCounts });
+    console.log(this.state.counts.length);
   }
 
-  updateSpeed(value) {
-    this.setState({
-      speed: this.state.speed + value,
-    });
+  generateBoolean() {
+    const floatProbability = this.state.probability / 100.0;
+    const randFloat = Math.random();
+
+    return randFloat < floatProbability;
+  }
+
+  geigerValue() {
+    const { length } = this.state.counts;
+
+    let trueCount = 0;
+
+    for (let i = 0; i < length; i++) {
+      if (this.state.counts[i]) trueCount++;
+    }
+
+    return trueCount / length;
+  }
+
+  updateProbability(value) {
+    const newValue = this.state.probability + value;
+    if (newValue >= 0 && newValue <= 100) {
+      this.setState({ probability: newValue });
+    }
   }
 
   render() {
-    const { children, headerText } = this.props;
-
     return (
       <div>
-        <h2>{headerText}</h2>
-        <h3>You are moving north at {this.state.speed} feet per second.</h3>
-        <h3>You have travelled north {this.state.distanceTravelled} feet so far.</h3>
-        <div>
-          <button onClick={this.updateSpeed(1)}>Go Faster</button>
-          <button onClick={this.updateSpeed(-1)}>Go Slower</button>
-        </div>
-        {children}
+        <p>
+          The radiation level is currently: <strong>{this.geigerValue()}</strong>
+        </p>
+        <small>
+          The current radiation level is at {this.state.probability}%
+        </small>
+
+        <br />
+
+        <button onClick={this.updateProbability(-1)}>Decrease Radiation</button>
+        <button onClick={this.updateProbability(1)}>Increase Radiation</button>
       </div>
     );
   }
 }
 ```
 
-[distance-code-excerpt]: ../../code-excerpts/distance-tracker.md
+[geiger-code-excerpt]: ../../code-excerpts/geiger-counter.md
 
 #### Solution
 
@@ -83,17 +110,17 @@ nudge them in the right direction.
 ###### Missing `super`
 
 In the constructor, there should be a call of `super(props);` at the
-beginning.
+beginning. There should also be `props` passes in to the constructor.
 
 ###### Infinite Interval
 
-This one can be hard to spot. The `startTracker` method called in the
+This one can be hard to spot. The `startCounter` method called in the
 `componentDidMount` starts a `setInterval`, but when a component is
 unmounted, the interval will remain. To fix this, you would want to
 assign the interval so that it could be referenced and cleared later:
 
 ```js
-startTracker() {
+startCounter() {
   this.interval = setInterval(() => {...}, 1000);
 }
 
@@ -104,7 +131,7 @@ componentWillUnmount() {
 
 ###### Async State Update
 
-Inside `updateDistance`, we have a console log that depends on the state
+Inside `updateCounts`, we have a console log that depends on the state
 after the `this.setState(...)`. Because `setState` is asynchronous, it
 may or may not return the correct value. Instead, we should pass it as a
 callback like so:
@@ -115,17 +142,25 @@ this.setState({...}, () => console.log(...));
 
 ###### Click Callback
 
-The `onClick` should be a callback, not an invoked function. We should
-have something like this `onClick={() => this.updateSpeed(1)}`.
+Each `onClick` should be a callback, not an invoked function. We should
+have something like this `onClick={() => this.updateProbability(1)}`.
+
+###### Missing Bind
+
+Because we are directly invoking `this.geigerValue` in the render
+function, we should make sure it is properly bound. Add the following
+to your constructor:
+
+```js
+this.geigerValue = this.geigerValue.bind(this);
+```
 
 ##### Usage
 
 This component could be used like this:
 
 ```js
-<DistanceTracker headerText="This is the header">
-  <div>This is a child</div>
-</DistanceTracker>
+<GeigerCounter maxCountsSize={60} />
 ```
 
 ### React – Contrast and Compare
