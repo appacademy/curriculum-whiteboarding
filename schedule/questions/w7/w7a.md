@@ -151,6 +151,10 @@ this.setState({...}, () => console.log(...));
 Each `onClick` should be a callback, not an invoked function. We should
 have something like this `onClick={() => this.updateProbability(1)}`.
 
+Alternatively, you could rework the `updateProbability` function to
+return a function. In that case, you would want to bind
+`updateProbability` so that `this` is the appropriate context.
+
 ###### Missing Bind
 
 Because we are directly invoking `this.geigerValue` in the render
