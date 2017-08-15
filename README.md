@@ -9,7 +9,7 @@ There are four whiteboarding sessions that occur during the curriculum.
 
 * [Week 2][w2] (W2D2)
 * [Week 3][w3] (W3D2)
-* [Week 4][w4] (W4D4)
+* [Week 4][w4] (W4D3)
 * [Week 7][w7] (W7D3)
 
 [w2]: ./schedule/w2.md
