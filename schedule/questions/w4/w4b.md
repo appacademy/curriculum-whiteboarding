@@ -81,7 +81,6 @@ class User < ActiveRecord::Base
 end
 
 class Assignment < ActiveRecord::Base
-  validates :user, :project, presence: true
   validates :user, uniqueness: { scope: :project }
 
   belongs_to :user,
@@ -109,31 +108,25 @@ class Project < ActiveRecord::Base
 end
 ```
 
-### Authentication
+### CSS Pre-Processors
 
 #### Prompt
 
-Describe a method for providing user authentication through session
-tokens.
+Describe the advantages of using a CSS pre-processor and name some common examples.
 
 #### Solution
 
-A solution to this prompt should touch on the following:
+A complete description should touch on at least three of the following:
 
-* Session token generation
-  * Random
-  * Unique
-    * What happens if SecureRandom happens to generate the same string
-      twice for two different users in the database?
-  * When to reset a user's session token
-    * Logout
-* Passwords
-  * Do NOT store in database
-  * Salt
-    * Reason
-      * Raise the cost of cracking a password to deter malicious
-        behavior
-    * BCrypt
-      * How the comparison with the hashed password works
-* Passing the session token through cookies
-  * Use of `session[:session_token]`
+* Assign and reference variables
+* Iterative loops and conditional statements
+* Nested selectors
+* Custom function declaration (through `@mixin`)
+* Decomposition of code (through `@import` and partials)
+* Inheritance (through `@extend`)
+
+Examples:
+* Sass
+* SCSS
+* Less
+* Stylus
