@@ -1,3 +1,5 @@
+** NOTE ** : This is a deprecated repo. See [whiteboarding](https://github.com/appacademy/whiteboarding) for an updated whiteboarding curriculum. 
+
 # Curriculum Whiteboarding
 
 This repository exists to organize the whiteboard questions that
